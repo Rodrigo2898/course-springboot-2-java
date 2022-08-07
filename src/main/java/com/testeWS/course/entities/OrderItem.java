@@ -18,13 +18,13 @@ public class OrderItem implements Serializable {
 	@EmbeddedId
 	private OrderItemPK id = new OrderItemPK();
 	
-	private Integer quantity;
+	private Long quantity;
 	private Double price;
 	
 	public OrderItem() {
 	}
 
-	public OrderItem(Order order, Product  product, Integer quantity, Double price) {
+	public OrderItem(Order order, Product  product, Long quantity, Double price) {
 		super();
 		id.setOrder(order);
 		id.setProduct(product);
@@ -49,11 +49,11 @@ public class OrderItem implements Serializable {
 		id.setProduct(product);
 	}
 
-	public Integer getQuantity() {
+	public Long getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(Integer quantity) {
+	public void setQuantity(Long quantity) {
 		this.quantity = quantity;
 	}
 

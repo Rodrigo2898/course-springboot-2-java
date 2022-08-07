@@ -21,7 +21,7 @@ public class Payment implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 	private Instant moment;
 	
 	@JsonIgnore
@@ -32,18 +32,18 @@ public class Payment implements Serializable {
 	public Payment() {
 	}
 
-	public Payment(Integer id, Instant moment, Order order) {
+	public Payment(Long id, Instant moment, Order order) {
 		super();
 		this.id = id;
 		this.moment = moment;
 		this.order = order;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
